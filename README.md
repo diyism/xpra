@@ -17,7 +17,10 @@
     xpra start :13 --html=on --bind-tcp=0.0.0.0:9013 --xvfb="Xvfb" --start="sh -c 'sleep 2; lite >a.log 2>&1'"
     xpra start :14 --html=on --bind-tcp=0.0.0.0:9014 --xvfb="Xvfb" --start="xterm -e lite"
 
-    #停止:
+    #列出所有sessions:
+    xpra list-sessions
+
+    #停止session:
     xpra stop :12
 
     #运行远端的firefox:
