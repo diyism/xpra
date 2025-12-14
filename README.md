@@ -33,7 +33,11 @@
     xpra seamless ssh://USER@HOST/ --start=firefox
 
     #运行同一内网 远端机器的firefox(远端机器需已启动xpra在0.0.0.0:8080/:10)并在近端展示:
-    xpra attach tcp://192.168.0.2:8080/:10 --start=firefox
+    xpra attach tcp://192.168.0.2:9010/:10 --start=firefox
+
+    #从网页访问:
+    http://192.168.0.2:9010
+    #第一个网页连接上以后, 第二个网页再连接需要在 Advanced options里需要选上 Steal session from existing client
 
 1. [About](#about)
 2. [Installation](#installation)
