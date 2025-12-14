@@ -8,10 +8,10 @@
     
     xpra start :10 --html=on --bind-tcp=0.0.0.0:8080 --start=firefox
 
-    #运行远端的firefox
+    #运行远端的firefox:
     xpra seamless ssh://USER@HOST/ --start=firefox
 
-    #运行内网另外一台机器的firefox:
+    #运行内网另外一台机器的firefox(另外一台机器需要已经启动xpra在0.0.0.0:8080/:10):
     xpra attach tcp://192.168.0.2:8080/:10 --start=firefox
 
 1. [About](#about)
