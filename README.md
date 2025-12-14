@@ -1,8 +1,10 @@
     sudo apt install libxxhash-dev python3-cairo-dev python-gi-dev libgirepository-2.0-dev xvfb
     pipx install xpra
     pipx inject xpra python3-gi python3-gi-cairo pygobject   #如果先安装了xpra 后安装python3-gi 则需要再往pipx虚拟环境注入一下
-    mkdir -p ~/.local/share/xpra
-    git clone https://github.com/Xpra-org/xpra-html5.git ~/.local/share/xpra/www
+
+    git clone https://github.com/Xpra-org/xpra-html5
+    cd xpra-html5
+    ./setup.py install
     
     xpra start :10 --html=on --bind-tcp=0.0.0.0:8080 --start=firefox
 
