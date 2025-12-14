@@ -11,7 +11,7 @@
     #运行远端的firefox:
     xpra seamless ssh://USER@HOST/ --start=firefox
 
-    #运行远端机器的firefox(远端机器需已启动xpra在0.0.0.0:8080/:10)并在近端展示:
+    #运行同一内网 远端机器的firefox(远端机器需已启动xpra在0.0.0.0:8080/:10)并在近端展示:
     xpra attach tcp://192.168.0.2:8080/:10 --start=firefox
 
 1. [About](#about)
