@@ -5,8 +5,14 @@
     git clone https://github.com/Xpra-org/xpra-html5
     cd xpra-html5
     ./setup.py install
-    
-    xpra start :10 --html=on --bind-tcp=0.0.0.0:8080 --start=firefox
+
+    #分成多个端口方便在waveterm里使用不同url:
+    xpra start :10 --html=on --bind-tcp=0.0.0.0:9010 --xvfb="Xvfb" --start=firefox
+    xpra start :11 --html=on --bind-tcp=0.0.0.0:9011 --xvfb="Xvfb" --start=google-chrome-stable
+    xpra start :12 --html=on --bind-tcp=0.0.0.0:9012 --xvfb="Xvfb" --start=xterm        #先启动xterm, 再在xterm里启动别的gui程序
+
+    #停止:
+    xpra stop :12
 
     #运行远端的firefox:
     xpra seamless ssh://USER@HOST/ --start=firefox
