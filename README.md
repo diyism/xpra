@@ -1,4 +1,5 @@
     sudo apt install libxxhash-dev python3-cairo-dev python-gi-dev
+    pipx inject xpra python3-gi python3-gi-cairo
     pipx install xpra
 
 1. [About](#about)
