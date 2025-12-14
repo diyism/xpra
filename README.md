@@ -14,7 +14,7 @@
     xpra start :12 --html=on --bind-tcp=0.0.0.0:9012 --xvfb="Xvfb" --start=xterm
 
     #启动lite会报错退出, 因为它太快input focus而xserver还没启动好, 加sleep才行:
-    xpra start :13 --html=on --bind-tcp=0.0.0.0:9013 --xvfb="Xvfb" --start="sh -c 'sleep 2; lite >>a.log 2>&1'"
+    xpra start :13 --html=on --bind-tcp=0.0.0.0:9013 --xvfb="Xvfb" --start="sh -c 'sleep 2; lite >a.log 2>&1'"
 
     #停止:
     xpra stop :12
