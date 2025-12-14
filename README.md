@@ -5,7 +5,7 @@
 
     git clone https://github.com/Xpra-org/xpra
     cd xpra
-    ./setup.py install-repo
+    python3 ./setup.py install
     xpra --version    #6.5
 
     git clone https://github.com/Xpra-org/xpra-html5
