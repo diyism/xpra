@@ -1,3 +1,6 @@
+    sudo apt install libxxhash-dev
+    pipx install xpra
+
 1. [About](#about)
 2. [Installation](#installation)
 3. [Usage](#usage)
