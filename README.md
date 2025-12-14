@@ -1,4 +1,4 @@
-    sudo apt install libxxhash-dev python3-cairo-dev python-gi-dev libgirepository-2.0-dev
+    sudo apt install libxxhash-dev python3-cairo-dev python-gi-dev libgirepository-2.0-dev xvfb
     pipx install xpra
     pipx inject xpra python3-gi python3-gi-cairo pygobject   #如果先安装了xpra 后安装python3-gi 则需要再往pipx虚拟环境注入一下
 
