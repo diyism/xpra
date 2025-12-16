@@ -15,6 +15,9 @@
     #分成多个端口方便在waveterm里使用不同url(http://127.0.0.1:9011):
     xpra start :10 --html=on --bind-tcp=0.0.0.0:9010 --xvfb="Xvfb" --start=firefox
     xpra start :11 --html=on --bind-tcp=0.0.0.0:9011 --xvfb="Xvfb" --start=google-chrome-stable
+    #但实际上不需要, 比如启动一个firefox进程在一个display端口:10,并且开两个firefox window, 则在waveterm两个tab内都连接9010 可以分别focus 不同的firefox window并记住:
+    http://192.168.0.2:9010
+    #\u7b2c\u4e00\u4e2a\u7f51\u9875\u8fde\u63a5\u4e0a\u4ee5\u540e, \u7b2c\u4e8c\u4e2a\u7f51\u9875\u518d\u8fde\u63a5\u9700\u8981\u5728 Advanced options\u91cc\u9700\u8981\u9009\u4e0a Steal session from existing client
     
     #先启动xterm, 再在xterm里启动别的gui程序
     xpra start :12 --html=on --bind-tcp=0.0.0.0:9012 --xvfb="Xvfb" --start=xterm
@@ -34,10 +37,6 @@
 
     #运行同一内网 远端机器的firefox(远端机器需已启动xpra在0.0.0.0:8080/:10)并在近端展示:
     xpra attach tcp://192.168.0.2:9010/:10 --start=firefox
-
-    #从网页访问:
-    http://192.168.0.2:9010
-    #第一个网页连接上以后, 第二个网页再连接需要在 Advanced options里需要选上 Steal session from existing client
 
 1. [About](#about)
 2. [Installation](#installation)
