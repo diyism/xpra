@@ -18,7 +18,7 @@
     #但实际上不需要, 比如启动一个firefox进程在一个display端口:10,并且开两个firefox window, 则在waveterm两个tab内都连接9010 可以分别focus 不同的firefox window并记住:
     http://192.168.0.2:9010
     #第一个网页连接上以后, 第二个网页再连接需要在 Advanced options里需要选上 Steal session from existing client
-    #
+    #另外  Clipboard sharing, preferred format 需要选UTF8, 不能选 text/plain, 否则从网页复制汉字会变成\u62150 这种形式
     
     #先启动xterm, 再在xterm里启动别的gui程序
     xpra start :12 --html=on --bind-tcp=0.0.0.0:9012 --xvfb="Xvfb" --start=xterm
