@@ -1,4 +1,6 @@
     sudo apt install libxxhash-dev python3-cairo-dev python-gi-dev libgirepository-2.0-dev xvfb
+    #if xvfb depend conflict, first: sudo dpkg -i --force-depends xvfb_21.1.21-1_amd64.deb
+    #then cp /usr/bin/Xvfb ./ ; sudo apt remove xvfb; sudo install Xvfb /usr/bin/
     #pipx install xpra
     #pipx inject xpra python3-gi python3-gi-cairo pygobject   #如果先安装了xpra 后安装python3-gi 则需要再往pipx虚拟环境注入一下
     #xpra --versiion    #6.4
