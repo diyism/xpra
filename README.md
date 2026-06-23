@@ -41,6 +41,10 @@
     #运行同一内网 远端机器的firefox(远端机器需已启动xpra在0.0.0.0:8080/:10)并在近端展示:
     xpra attach tcp://192.168.0.2:9010/:10 --start=firefox
 
+    #播放当前窗口到手机, 在手机浏览器里访问 http://192.168.0.102:9015 即可, 没有声音是需要刷新下网页(会看到pavucontrol的Recording页多出来Xpra Audio record的采集):
+    ip a | grep eth0           #比如得到电脑的ip是192.168.0.102
+    xpra shadow :0 --bind-tcp=0.0.0.0:9015 --daemon=no
+
 1. [About](#about)
 2. [Installation](#installation)
 3. [Usage](#usage)
